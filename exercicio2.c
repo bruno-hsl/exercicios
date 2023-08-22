@@ -1,47 +1,17 @@
 #include <stdio.h>
-#include <math.h>
 
+main(){
+    //declaracao de variaveis
+    int n, dobrar;
 
- main() {
-    int n1, n2;
-    char operador[2];
+    printf("Digite um numero");
+    scanf("%d", & n);
 
-    printf("1° numero: ");
-    scanf("%d", &n1);
-    fflush(stdin);
+    //operacao
+    dobrar = n * 2;
 
-    printf("Digite um operador('+' '-' '/' '*' '^' 'resto'):  ");
-    fgets(operador, sizeof(operador), stdin);
-    fflush(stdin);
-
-    printf("2° numero: ");
-    scanf("%d", &n2);
-    fflush(stdin);
-
-    int adicao = n1 + n2;
-    int subtracao = n1 - n2;
-    int divisao = n1 / n2;
-    int multiplicacao = n1 * n2;
-    int pot = pow(n1,n2);
-
-    if (strcmp(operador, "+") == 0) {
-        printf("%d", adicao);
-    }
-    else if(strcmp(operador, "-") == 0){
-        printf("%d", subtracao);
-    }
-    else if(strcmp(operador, "/") == 0){
-        printf("%d", divisao);
-    }
-    else if(strcmp(operador, "*") == 0){
-        printf("%d", multiplicacao);
-    }
-    else if(strcmp(operador, "^") == 0){
-        printf("%d", pot);
-    }
-    else{
-        printf("operador invalido");
-    }
+    //saida de dados
+    printf("%d", dobrar);
 
     return 0;
 }
